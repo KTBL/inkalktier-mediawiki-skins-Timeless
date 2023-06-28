@@ -14,10 +14,9 @@ html {
 }
 
 .ts-inner {
-	max-width: @content-width;
+	width: 100%;
 	box-sizing: border-box;
-	padding: 0 1em;
-	margin: auto;
+	padding: 0 0;
 }
 
 div.mw-notification-area {
@@ -28,6 +27,9 @@ div.mw-notification-area {
 
 #mw-header {
 	.flex-display;
+	width: 100%;
+	margin-top:auto;
+	margin-bottom: auto;
 }
 
 #mw-header-container {
@@ -36,7 +38,8 @@ div.mw-notification-area {
 	 * IE10 and IE11.
 	 * @see https://phabricator.wikimedia.org/T173769
 	 */
-	height: 0;
+	height: 120px;
+	box-shadow: 0px 0px 10px #00000033;
 	position: fixed;
 	z-index: 100;
 	top: 0;
@@ -46,6 +49,7 @@ div.mw-notification-area {
 	padding: 0.5em 0 0;
 	min-height: @fixed-header-height;
 	box-sizing: border-box;
+	display: flex;
 }
 
 #p-logo-text {
@@ -204,10 +208,22 @@ div.mw-notification-area {
 .sidebar-chunk h2 {
 	display: none;
 }
-
+.sidebar-chunk{
+	border-radius: 12px;
+}
+#mw-related-navigation .sidebar-chunk{
+	background: #fff;
+}
 /* Content */
 
 #mw-content-container {
 	margin-top: @fixed-header-height + @color-height;
+	margin-top: 120px;
 	padding-bottom: 1em;
+	display: flex;
+	background-color: #F3FBFF;
+}
+
+#mw-content{
+	border-radius: 12px;
 }

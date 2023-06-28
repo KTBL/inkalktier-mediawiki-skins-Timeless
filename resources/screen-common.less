@@ -21,6 +21,7 @@ body {
 #mw-content {
 	.box;
 	background: @background;
+	margin-top: 1em;
 	padding: 1em @content-padding 3em;
 }
 
@@ -63,16 +64,22 @@ body {
 #p-logo {
 	text-align: center;
 	margin: auto;
+	display: none;
 }
 
 #p-logo-text {
+
+	background-image: url('../resources/images/ikt_info_logo.png');
+	background-size:contain;
+	background-repeat: no-repeat;
+	margin-left: 30px;
 	max-width: @column-left-size;
 	text-align: center;
 	line-height: 1;
 
 	a {
 		padding: 0.1em 1em 0.2em;
-		color: @text;
+		color: transparent;
 		font-family: @fonts-secondary;
 		font-variant: small-caps;
 		font-size: 1.85em;
@@ -100,7 +107,11 @@ body {
 	position: relative;
 	border: solid 1px @base70;
 }
-
+#simpleSearch {
+	width: 450px;
+	margin-left: auto;
+	margin-right: 0;
+}
 #searchInput {
 	border: 0;
 	margin: 0;
@@ -113,6 +124,9 @@ body {
 	font-family: inherit;
 }
 
+#mw-header-container {
+	height: 120px;
+}
 #searchButton,
 #mw-searchButton {
 	position: absolute;
@@ -647,7 +661,6 @@ ul {
 	margin-left: auto;
 	text-align: center;
 }
-
 /* Thumbnails */
 /* @noflip */
 .floatright,
@@ -817,6 +830,7 @@ body :not( :checked ) > .toctogglespan:after {
 
 .color-bar {
 	width: 100%;
+	display: none;
 }
 
 .color-left {
@@ -838,6 +852,7 @@ body :not( :checked ) > .toctogglespan:after {
 	max-width: @content-width;
 	margin: 0 auto -@color-height;
 	position: relative;
+	display: none;
 }
 
 .color-middle {
